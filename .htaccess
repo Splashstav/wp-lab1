@@ -1,0 +1,15 @@
+#RewriteEngine On
+
+#Options +FollowSymLinks
+
+#RwriteCond %{REQUEST_FILENAME} !-d
+#RwriteCond %{REQUEST_FILENAME} !-f
+#RwriteCond %{REQUEST_FILENAME} !-l
+
+#RewriteBase /
+#RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
